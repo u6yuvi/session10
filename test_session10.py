@@ -1,5 +1,6 @@
-from session10 import Polygon
+from session10 import Polygon, Polygons
 import math
+import pytest
 
 def test_polygon():
     abs_tol = 0.001
@@ -81,3 +82,20 @@ def test_polygon():
     assert p3 != p4
     assert p1 != p4
     assert p4 == p5
+
+
+def test_iteration():
+    """Test iteration over the Polygons."""
+    polygons = Polygons(5, 10)
+    sides_list = [polygon.side_length for polygon in polygons]
+    assert sides_list== [17.32050807568877,14.14213562373095,11.755705045849464]
+
+
+def test_indexing():
+    """Test indexing into the Polygons collection."""
+    polygons = Polygons(5, 10)
+    assert polygons[0].side_length == 17.32050807568877
+    assert polygons[1].side_length== 14.14213562373095
+    assert polygons[2].side_length == 11.755705045849464
+    with pytest.raises(IndexError,match=r"list index out of range"):
+        _ = polygons[3]  # Index out of range
