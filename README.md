@@ -3,6 +3,8 @@
 Task:
 Refactor the Polygons class to make it an iterable, you'll need to implement both an iterable and an iterator. In 
 
+Refer old_polygons.py for the implementation using the sequence
+
 Note:
 Python, an iterable is an object that implements the __iter__ method, and an iterator is an object that implements both the __iter__ and __next__ methods.
 
@@ -18,7 +20,7 @@ Polygons Class:
 
 This method returns an instance of the PolygonsIterator class, initialized with the list of polygons.
 
-2. PolygonsIterator Class:
+2. Polygons Iterator Class:
 
 __init__(): Initializes the iterator with the list of polygons and sets the initial index to 0.
 __iter__(): Returns self, making PolygonsIterator both an iterable and an iterator.
