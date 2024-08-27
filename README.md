@@ -27,3 +27,4 @@ __iter__(): Returns self, making PolygonsIterator both an iterable and an iterat
 __next__(): Returns the next polygon in the sequence. If the end of the list is reached, it raises StopIteration to signal that iteration is complete.
 With these changes, the Polygons class now supports iteration, allowing you to use it in loops or any other context that requires an iterable object. For example:
 
+Colab Link  - https://colab.research.google.com/drive/1PrtCeyABG-fXTSo7btHk0kyn88ny_QH5?usp=drive_link
